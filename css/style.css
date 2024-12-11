@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Jost;
+}
+.section {
+  margin-bottom: 6.25rem;
+}
+.container {
+  max-width: 69.3125rem;
+  margin: auto;
+}
+.button-purple {
+  border: none;
+  background-color: #6f73ee;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+.button-purple:hover {
+  background-color: #5e61cc;
+}
+.button-white {
+  border: none;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+.button-white:hover {
+  box-shadow: inset 0px 0px 7px #585858;
+}
+.section-title {
+  color: rgb(40, 39, 57);
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 3.1875rem;
+}
+
+/* -------------------------- HEADER-NAV -------------------------- */
+/* __________header-nav-top__________ */
+.header-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.975rem;
+}
+.header-nav-top-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 30px;
+  margin-right: 30px;
+}
+.header-nav-top-list-item {
+  color: #5d6c7b;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+}
+.header-nav-top-link {
+  color: inherit;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.header-nav-top-link:hover {
+  color: #212529;
+}
+.header-nav-top-social-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  flex-grow: 1;
+}
+.header-nav-top-social-icon {
+  transition: transform 0.2s;
+}
+.header-nav-top-social-link:hover .header-nav-top-social-icon {
+  transform: scale(1.4);
+}
+.header-nav-top-phone {
+  text-decoration: none;
+  color: #282739;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+}
+.header-nav-top-phone:hover {
+  text-decoration: underline;
+}
+/* __________header-nav-bottom__________ */
+.header-nav-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-nav-logo {
+  color: #282739;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.6875rem;
+  text-transform: uppercase;
+  margin-right: 2.1875rem;
+}
+.header-nav-catalog-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5625rem 1.125rem;
+  margin-right: 1.25rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  transition: background 0.2s;
+}
+.catalog-button-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 0.8125rem;
+}
+.catalog-button-line {
+  display: block;
+  width: 0.8125rem;
+  height: 0.0625rem;
+  background-color: #fff;
+  border-radius: 1.3px;
+}
+.catalog-button-line:not(:last-child) {
+  margin-bottom: 5px;
+}
+.catalog-button-line:nth-child(3) {
+  width: 0.4375rem;
+}
+.header-search-form {
+  display: flex;
+  justify-content: space-between;
+}
+.header-search-input {
+  padding: 0.625rem 1.25rem;
+  width: 100%;
+  border-radius: 0.3125rem 0 0 0.3125rem;
+  border: 1.5px solid #6f73ee;
+}
+.header-search-input:focus {
+  outline: 1px ridge #6f73ee;
+  outline-offset: -2px;
+}
+.header-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0 0.3125rem 0.3125rem 0;
+}
+.header-nav-bottom-shopping-tools {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5625rem;
+}
+.header-nav-phopping-tools-link {
+  display: flex;
+  align-items: center;
+}
+.basket {
+  gap: 0.625rem;
+  text-decoration: none;
+  color: #282739;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+/* -------------------------- HEADER -------------------------- */
+.header {
+  max-width: 86.25rem;
+  height: auto;
+  margin: auto;
+  padding: 3.5rem 8.5rem;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.header-bg {
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-content {
+  width: 60%;
+  color: #fff;
+  overflow-wrap: break-word;
+}
+.header-cintact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.1875rem;
+}
+.header-address {
+  color: inherit;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+  font-style: normal;
+}
+.working-hours {
+  color: inherit;
+  font-size: 0.75rem;
+  font-weight: 200;
+  line-height: 17px;
+}
+.header-title {
+  margin: 0;
+  color: inherit;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 3.1875rem;
+  text-transform: uppercase;
+  margin-bottom: 0.2625rem;
+}
+.header-text {
+  margin: 0;
+  color: inherit;
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-bottom: 1.75rem;
+}
+.visit-benefits-list {
+  display: flex;
+  padding: 0;
+  margin-bottom: 38px;
+}
+.visit-benefits-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+  color: inherit;
+  font-size: 0.975rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  max-width: 12.75rem;
+  margin-right: 2.1875rem;
+}
+.visit-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.vitis-benefits-text {
+  margin: 0;
+  overflow-wrap: break-word;
+  max-width: 9.3125rem;
+}
+.header-button {
+  color: #6f73ee;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  padding: 0.9375rem 2.5rem;
+}
+
+/* -------------------------- MEDIA -------------------------- */
+@media (max-width: 1276px) {
+  .header {
+    padding: 3.5rem 5.5rem;
+  }
+}
+@media (max-width: 1182px) {
+  .header {
+    padding: 3.5rem 0;
+  }
+  .container {
+    max-width: 60rem;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 50rem;
+  }
+  .header {
+    padding: 1rem 0;
+  }
+  .header-bg {
+    position: relative;
+    background-position: center right -120px;
+  }
+  .header-bg:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 97, 209, 0.15);
+    z-index: 1;
+  }
+}
+@media (max-width: 840px) {
+  .container {
+    max-width: 47rem;
+  }
+  .header-content {
+    width: 80%;
+  }
+}
+@media (max-width: 780px) {
+  .container {
+    padding: 0 0.625rem;
+  }
+  .header-bg {
+    position: relative;
+    background-position: center left;
+  }
+  .header-content {
+    width: 100%;
+  }
+  .header-nav-bottom {
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo tools"
+      "catalog search";
+  }
+  .header-nav-logo {
+    grid-area: logo;
+  }
+  .header-nav-catalog-button {
+    grid-area: catalog;
+  }
+  .header-search-form {
+    grid-area: search;
+    margin-right: 0;
+  }
+  .header-search-input {
+    max-width: 100%;
+  }
+  .header-nav-bottom-shopping-tools {
+    grid-area: tools;
+    justify-content: end;
+  }
+}
+@media (max-width: 618px) {
+  .visit-benefits-list-item {
+    max-width: 50%;
+  }
+  .vitis-benefits-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .header-button {
+    width: 100%;
+  }
+  .header-nav-top {
+    flex-wrap: wrap;
+  }
+  .header-nav-top-list {
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .visit-benefits-list {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .visit-benefits-list-item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .header-nav-top {
+    margin-bottom: 0;
+  }
+  .header-nav-bottom {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "search search"
+      "catalog tools";
+  }
+  .header-nav-logo {
+    margin-right: 0;
+    text-align: center;
+  }
+  .header-nav-catalog-button {
+    justify-content: center;
+  }
+  .header-nav-bottom-shopping-tools {
+    padding-left: 0;
+  }
+  .header-title {
+    font-size: 1.8875rem;
+  }
+  .header-text {
+    font-size: 1.0625rem;
+  }
+  .header-cintact-info {
+    flex-wrap: wrap;
+  }
+  .working-hours {
+    flex-basis: 100%;
+  }
+  .header-nav-top-social-list {
+    margin-bottom: 0;
+  }
+}
