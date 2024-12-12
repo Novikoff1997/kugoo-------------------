@@ -1,3 +1,4 @@
+@import url(swiper-bundle.min.css);
 * {
   box-sizing: border-box;
 }
@@ -394,6 +395,111 @@ html {
 /* -------------------------- TEST-DRIVE SECTION -------------------------- */
 .test-drive-title {
   text-align: center;
+  color: rgb(40, 39, 57);
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 3.1875rem;
+}
+.test-drive-cards {
+  justify-content: space-between;
+}
+.test-drive-card {
+  width: 15.9375rem;
+  padding: 0.625rem 1.1875rem;
+}
+.test-drive-card-tools {
+  display: flex;
+  justify-content: space-between;
+}
+.badge-hit,
+.badge-new {
+  min-width: 2.5625rem;
+  height: 1.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+  border-radius: 0.3125rem;
+  padding: 0.25rem 0.5625rem;
+}
+.badge-hit {
+  background-color: #ee685f;
+}
+.badge-new {
+  background-color: #75d14a;
+}
+.test-drive-card-title {
+  color: rgb(40, 39, 57);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  margin-bottom: 1.25rem;
+}
+.test-drive-features-list {
+  padding: 0;
+  list-style: none;
+  columns: 2;
+}
+.test-drive-features-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.125rem;
+  color: rgb(93, 108, 123);
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.price-and-tools {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.last-price {
+  text-decoration: line-through;
+  color: rgb(93, 108, 123);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+}
+.price {
+  color: rgb(40, 39, 57);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.8125rem;
+}
+.tools-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.875rem;
+}
+.test-drive-card-button {
+  width: 100%;
+  padding: 0.625rem 2.3125rem;
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+}
+.scooter-img {
+  width: 100%;
+  height: auto;
+}
+.slider-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 1.25rem;
+}
+.slider-button-prev,
+.slider-button-next {
+  padding: 10px;
+  width: 20%;
 }
 /* -------------------------- MEDIA -------------------------- */
 @media (max-width: 1276px) {
@@ -427,6 +533,12 @@ html {
   .education-img {
     width: 40%;
     height: auto;
+  }
+  .slider-button-next,
+  .slider-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 992px) {
@@ -463,6 +575,9 @@ html {
   .education-img {
     height: 100%;
     object-fit: cover;
+  }
+  .education {
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 840px) {
@@ -521,6 +636,9 @@ html {
   .education-title {
     line-height: 110%;
     font-size: 1.4875rem;
+  }
+  .test-drive-title {
+    font-size: 1.8875rem;
   }
 }
 @media (max-width: 618px) {
@@ -622,5 +740,8 @@ html {
   .experience-title {
     font-size: 1.6875rem;
     line-height: 124%;
+  }
+  .test-drive-title {
+    font-size: 1.4875rem;
   }
 }
