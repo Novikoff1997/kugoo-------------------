@@ -6,6 +6,8 @@ html {
 }
 .section {
   margin-bottom: 6.25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   max-width: 69.3125rem;
@@ -34,6 +36,15 @@ html {
   font-size: 2.1875rem;
   font-weight: 600;
   line-height: 3.1875rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.section-text {
+  color: rgb(40, 39, 57);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8125rem;
+  margin: 0;
 }
 
 /* -------------------------- HEADER-NAV -------------------------- */
@@ -180,6 +191,7 @@ html {
   padding: 3.5rem 8.5rem;
   border-radius: 10px;
   margin-top: 40px;
+  margin-bottom: 6.25rem;
 }
 .header-bg {
   background-image: url(../img/header-bg.jpg);
@@ -267,6 +279,50 @@ html {
   font-weight: 400;
   line-height: 1.4375rem;
   padding: 0.9375rem 2.5rem;
+}
+/* -------------------------- EXPERIENCE SECTION -------------------------- */
+.experience {
+  max-width: 86.25rem;
+  position: relative;
+}
+.experience-content-wrapper {
+  width: 60%;
+}
+.experience-content {
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+}
+.experience-list-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #6f73ee;
+  border-radius: 50%;
+  margin-right: 0.6875rem;
+}
+.experience-content-list {
+  padding: 0;
+}
+.experience-content-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.9375rem;
+}
+.experience-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.experience-title {
+  margin-bottom: 1.875rem;
+}
+.experience-text {
+  margin-bottom: 1.125rem;
+}
+.bold {
+  font-weight: 500;
 }
 
 /* -------------------------- MEDIA -------------------------- */
