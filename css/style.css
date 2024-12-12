@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html {
-  font-family: Jost;
+  font-family: Jost, sans-serif;
 }
 .section {
   margin-bottom: 6.25rem;
@@ -191,7 +191,7 @@ html {
   padding: 3.5rem 8.5rem;
   border-radius: 10px;
   margin-top: 40px;
-  margin-bottom: 6.25rem;
+  margin-bottom: 4.25rem;
 }
 .header-bg {
   background-image: url(../img/header-bg.jpg);
@@ -235,7 +235,6 @@ html {
 .header-text {
   margin: 0;
   color: inherit;
-  font-family: Jost;
   font-size: 20px;
   font-weight: 400;
   line-height: 29px;
@@ -301,6 +300,7 @@ html {
   border: 1px solid #6f73ee;
   border-radius: 50%;
   margin-right: 0.6875rem;
+  flex-shrink: 0;
 }
 .experience-content-list {
   padding: 0;
@@ -308,12 +308,18 @@ html {
 .experience-content-list-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.4375rem;
+  color: rgb(40, 39, 57);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
 }
 .experience-img {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.625rem;
 }
 .experience-title {
   margin-bottom: 1.875rem;
@@ -321,10 +327,74 @@ html {
 .experience-text {
   margin-bottom: 1.125rem;
 }
+.experience-list-item-text {
+  margin: 0;
+}
 .bold {
   font-weight: 500;
 }
 
+/* -------------------------- EDUCATION SECTION -------------------------- */
+.education {
+  max-width: 86.25rem;
+  position: relative;
+  margin-top: 7.6875rem;
+}
+.education-content-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.education-content {
+  max-width: 57%;
+}
+.education-title {
+  margin-bottom: 1.875rem;
+}
+.education-text {
+  margin-bottom: 1.125rem;
+}
+.education-content-list {
+  list-style: none;
+  padding: 0;
+}
+.education-content-list-item {
+  display: flex;
+  align-items: center;
+}
+.education-list-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #6f73ee;
+  border-radius: 50%;
+  margin-right: 0.6875rem;
+  flex-shrink: 0;
+}
+.education-content-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4375rem;
+  color: rgb(40, 39, 57);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+.education-list-item-text {
+  margin: 0;
+}
+.education-img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.625rem;
+}
+/* -------------------------- TEST-DRIVE SECTION -------------------------- */
+.test-drive-title {
+  text-align: center;
+}
 /* -------------------------- MEDIA -------------------------- */
 @media (max-width: 1276px) {
   .header {
@@ -337,6 +407,26 @@ html {
   }
   .container {
     max-width: 60rem;
+  }
+  .experience-content {
+    padding: 0;
+  }
+  .education-content {
+    padding: 0;
+  }
+  .experience-title {
+    font-size: 1.7875rem;
+  }
+  .education-title {
+    font-size: 1.7875rem;
+  }
+  .experience-img {
+    width: 40%;
+    height: auto;
+  }
+  .education-img {
+    width: 40%;
+    height: auto;
   }
 }
 @media (max-width: 992px) {
@@ -359,6 +449,20 @@ html {
     width: 100%;
     background-color: rgba(94, 97, 209, 0.15);
     z-index: 1;
+  }
+  .experience-list-item-text {
+    font-size: 1rem;
+  }
+  .education-list-item-text {
+    font-size: 1rem;
+  }
+  .experience-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .education-img {
+    height: 100%;
+    object-fit: cover;
   }
 }
 @media (max-width: 840px) {
@@ -404,6 +508,20 @@ html {
     grid-area: tools;
     justify-content: end;
   }
+  .experience-content-wrapper {
+    width: 60%;
+  }
+  .education-content-wrapper {
+    width: 100%;
+  }
+  .experience-title {
+    line-height: 110%;
+    font-size: 1.4875rem;
+  }
+  .education-title {
+    line-height: 110%;
+    font-size: 1.4875rem;
+  }
 }
 @media (max-width: 618px) {
   .visit-benefits-list-item {
@@ -411,6 +529,35 @@ html {
   }
   .vitis-benefits-text {
     max-width: 100%;
+  }
+  .experience {
+    margin-bottom: 4rem;
+  }
+  .education {
+    margin-top: 4rem;
+  }
+  .experience-content-wrapper {
+    width: 100%;
+  }
+  .education-content-wrapper {
+    justify-content: start;
+  }
+  .education-content {
+    max-width: 100%;
+  }
+  .experience-img {
+    position: relative;
+    display: block;
+    transform: none;
+    width: 100%;
+    margin: auto;
+  }
+  .education-img {
+    position: relative;
+    display: block;
+    transform: none;
+    width: 100%;
+    margin: auto;
   }
 }
 @media (max-width: 490px) {
@@ -433,8 +580,6 @@ html {
   .visit-benefits-list-item {
     max-width: 100%;
   }
-}
-@media (max-width: 490px) {
   .header-nav-top {
     margin-bottom: 0;
   }
@@ -470,5 +615,12 @@ html {
   }
   .header-nav-top-social-list {
     margin-bottom: 0;
+  }
+  .experience-list-item-text {
+    font-size: 1rem;
+  }
+  .experience-title {
+    font-size: 1.6875rem;
+    line-height: 124%;
   }
 }
