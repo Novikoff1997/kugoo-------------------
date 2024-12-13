@@ -2,6 +2,7 @@ const swiper = new Swiper(".swiper", {
   speed: 400,
   slidesPerView: 4,
   loop: false,
+  spaceBetween: 27,
   navigation: {
     nextEl: ".slider-button-next",
     prevEl: ".slider-button-prev",
@@ -9,7 +10,8 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     1: {
       loop: true,
-      slidesPerView: 1.2,
+      spaceBetween: 5,
+      slidesPerView: 1.15,
     },
     500: {
       loop: true,

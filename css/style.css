@@ -339,7 +339,7 @@ html {
 .education {
   max-width: 86.25rem;
   position: relative;
-  margin-top: 7.6875rem;
+  margin-top: 8.6875rem;
 }
 .education-content-wrapper {
   display: flex;
@@ -393,19 +393,22 @@ html {
   border-radius: 0.625rem;
 }
 /* -------------------------- TEST-DRIVE SECTION -------------------------- */
+.test-drive {
+  margin-top: 8rem;
+}
 .test-drive-title {
   text-align: center;
   color: rgb(40, 39, 57);
   font-size: 2.1875rem;
   font-weight: 600;
   line-height: 3.1875rem;
-}
-.test-drive-cards {
-  justify-content: space-between;
+  margin-bottom: 3.3rem;
 }
 .test-drive-card {
   width: 15.9375rem;
   padding: 0.625rem 1.1875rem;
+  border: 1.5px solid rgb(234, 235, 237);
+  border-radius: 10px;
 }
 .test-drive-card-tools {
   display: flex;
@@ -431,6 +434,11 @@ html {
 .badge-new {
   background-color: #75d14a;
 }
+.test-drive-card-content-wrapper {
+  padding-left: 0.325rem;
+  padding-top: 1rem;
+  max-width: 100%;
+}
 .test-drive-card-title {
   color: rgb(40, 39, 57);
   font-size: 1.125rem;
@@ -442,6 +450,7 @@ html {
   padding: 0;
   list-style: none;
   columns: 2;
+  margin-bottom: 0.4rem;
 }
 .test-drive-features-item {
   display: flex;
@@ -456,7 +465,7 @@ html {
 }
 .price-and-tools {
   display: flex;
-  justify-content: space-between;
+  gap: 2.3rem;
   margin-bottom: 1rem;
 }
 .last-price {
@@ -479,7 +488,7 @@ html {
 }
 .test-drive-card-button {
   width: 100%;
-  padding: 0.625rem 2.3125rem;
+  padding: 0.625rem 0.3125rem;
   color: rgb(255, 255, 255);
   font-size: 0.75rem;
   font-weight: 400;
@@ -488,6 +497,7 @@ html {
 .scooter-img {
   width: 100%;
   height: auto;
+  margin-bottom: 0.8rem;
 }
 .slider-buttons-wrapper {
   display: flex;
@@ -539,6 +549,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .price-and-tools {
+    gap: 0;
+    justify-content: space-between;
   }
 }
 @media (max-width: 992px) {
@@ -743,5 +757,7 @@ html {
   }
   .test-drive-title {
     font-size: 1.4875rem;
+    line-height: 120%;
+    margin-bottom: 1.875rem;
   }
 }
