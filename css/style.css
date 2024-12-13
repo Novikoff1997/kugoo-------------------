@@ -395,6 +395,7 @@ html {
 /* -------------------------- TEST-DRIVE SECTION -------------------------- */
 .test-drive {
   margin-top: 8rem;
+  margin-bottom: 2.6rem;
 }
 .test-drive-title {
   text-align: center;
@@ -510,6 +511,62 @@ html {
 .slider-button-next {
   padding: 10px;
   width: 20%;
+}
+/* -------------------------- CTA SECTION -------------------------- */
+.cta-content-wrapper {
+  display: flex;
+}
+.cta-content {
+  max-width: 41rem;
+  padding-top: 8.5rem;
+}
+.cta-title {
+  margin-bottom: 2rem;
+}
+.cta-text {
+  margin-bottom: 1.25rem;
+  color: rgb(40, 39, 57);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+}
+.cta-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.55rem;
+  margin-bottom: 0.55rem;
+}
+.input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  padding: 0.9375rem 1.5625rem;
+  flex-basis: 37%;
+  border: none;
+}
+.input:focus {
+  outline-color: #6f73ee;
+}
+.cta-form-button {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  padding: 0.9375rem 0;
+  flex-basis: 39.3%;
+}
+.cta-agreement {
+  max-width: 23rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+  color: rgb(40, 39, 57);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+}
+.pilicy-link {
+  color: inherit;
 }
 /* -------------------------- MEDIA -------------------------- */
 @media (max-width: 1276px) {
