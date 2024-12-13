@@ -611,6 +611,9 @@ html {
     gap: 0;
     justify-content: space-between;
   }
+  .cta-title {
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -650,6 +653,25 @@ html {
   .education {
     margin-bottom: 4rem;
   }
+  .cta {
+    margin-top: 6rem;
+  }
+  .cta-content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .cta-content {
+    padding-top: 2.5rem;
+  }
+  .cta-title {
+    font-size: 2rem;
+  }
+  .input {
+    flex-basis: 100%;
+  }
+  .cta-form-button {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 840px) {
   .container {
@@ -657,6 +679,12 @@ html {
   }
   .header-content {
     width: 80%;
+  }
+  .cta-form {
+    gap: 1.15rem;
+  }
+  .cta-title {
+    line-height: 120%;
   }
 }
 @media (max-width: 780px) {
@@ -711,6 +739,19 @@ html {
   .test-drive-title {
     font-size: 1.8875rem;
   }
+  .cta-content-wrapper {
+    justify-content: center;
+  }
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .cta-img {
+    display: none;
+  }
 }
 @media (max-width: 618px) {
   .visit-benefits-list-item {
@@ -750,6 +791,9 @@ html {
   }
 }
 @media (max-width: 490px) {
+  .section-title {
+    font-size: 1.4875rem;
+  }
   .header-button {
     width: 100%;
   }
@@ -812,9 +856,19 @@ html {
     font-size: 1.6875rem;
     line-height: 124%;
   }
+  .test-drive {
+    margin-top: 4rem;
+  }
   .test-drive-title {
     font-size: 1.4875rem;
     line-height: 120%;
     margin-bottom: 1.875rem;
+  }
+  .cta {
+    margin-top: 4rem;
+  }
+  .cta-icon {
+    height: 1.25rem;
+    width: 1.25rem;
   }
 }
