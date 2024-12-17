@@ -53,7 +53,6 @@ html {
 .logo-link {
   text-decoration: none;
 }
-
 /* -------------------------- HEADER-NAV -------------------------- */
 /* __________header-nav-top__________ */
 .header-nav-top {
@@ -147,7 +146,7 @@ html {
   width: 0.8125rem;
   height: 0.0625rem;
   background-color: #fff;
-  border-radius: 1.3px;
+  border-radius: 1.3008px;
 }
 .catalog-button-line:not(:last-child) {
   margin-bottom: 5px;
@@ -163,7 +162,7 @@ html {
   padding: 0.625rem 1.25rem;
   width: 100%;
   border-radius: 0.3125rem 0 0 0.3125rem;
-  border: 1.5px solid #6f73ee;
+  border: 1.5008px solid #6f73ee;
 }
 .header-search-input:focus {
   outline: 1px ridge #6f73ee;
@@ -418,7 +417,7 @@ html {
 .test-drive-card {
   width: 15.9375rem;
   padding: 0.625rem 1.1875rem;
-  border: 1.5px solid rgb(234, 235, 237);
+  border: 1.5008px solid rgb(234, 235, 237);
   border-radius: 10px;
 }
 .test-drive-card-tools {
@@ -579,7 +578,19 @@ html {
 .pilicy-link {
   color: inherit;
 }
-/* -------------------------- MODAL SUCCESS -------------------------- */
+/* -------------------------- MODAL WINDOWS -------------------------- */
+/* modal-dialog */
+.modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  z-index: 5;
+}
+
+/* modal-success */
 .modal-success {
   position: fixed;
   width: 15rem;
@@ -636,10 +647,18 @@ html {
   text-align: center;
   text-transform: uppercase;
 }
-.foote-header-form {
+.footer-header-form {
   display: flex;
   align-items: center;
   flex-basis: 50%;
+  position: relative;
+}
+.footer-header-form .just-validate-error-label {
+  position: absolute;
+  margin: 0;
+  font-size: 0.75rem;
+  top: 3px;
+  right: 167px;
 }
 .footer-input {
   padding: 0.9375rem 1.5625rem;
@@ -652,9 +671,12 @@ html {
   font-weight: 400;
   line-height: 1.4375rem;
   flex-grow: 1;
+  transition: background 0.2s;
 }
 .footer-input:focus {
   outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #212529;
 }
 .footer-input:focus::placeholder {
   visibility: hidden;
@@ -757,6 +779,8 @@ html {
   font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.0625rem;
+  transition: transform 0.2s;
+  display: block;
 }
 .callback-link-wrapper {
   padding-top: 0.425rem;
@@ -844,6 +868,19 @@ html {
   margin-left: 0.9375rem;
   gap: 1.2625rem;
 }
+.product-catalog-link:hover,
+.for-buyer-link:hover {
+  text-decoration: underline;
+}
+.callback-link:hover {
+  transform: scale(1.2);
+}
+.attstore-icon {
+  transition: transform 0.2s;
+}
+.footer-social-link:hover .attstore-icon {
+  transform: scale(1.2);
+}
 /* -------------------------- MEDIA -------------------------- */
 @media (max-width: 1276px) {
   .header {
@@ -889,6 +926,17 @@ html {
   }
   .cta-title {
     font-size: 2.5rem;
+  }
+  .product-catalog {
+    margin-right: 2rem;
+  }
+  .for-buyers {
+    margin-right: 1rem;
+  }
+  .market-bages {
+    margin-right: 0;
+    flex-grow: 1;
+    margin-left: 3.675rem;
   }
 }
 @media (max-width: 992px) {
@@ -948,6 +996,30 @@ html {
   .cta-form-button {
     flex-basis: 100%;
   }
+  .contacts-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .for-buyers-list {
+    columns: 1;
+  }
+  .footer-main-content-wrapper {
+    justify-content: space-between;
+  }
+  .footer-social-list {
+    gap: 0;
+  }
+  .market-bages {
+    margin-left: 1.675rem;
+  }
+  .footer-main {
+    margin-bottom: 0;
+  }
+  .footer-header-title {
+    font-size: 1rem;
+    line-height: 1.225rem;
+    max-width: 22.8125rem;
+  }
 }
 @media (max-width: 840px) {
   .container {
@@ -961,6 +1033,22 @@ html {
   }
   .cta-title {
     line-height: 120%;
+  }
+  .footer-logo-link {
+    flex-basis: 100%;
+    padding-left: 0.6rem;
+  }
+  .footer-basement-top {
+    flex-wrap: wrap;
+  }
+  .market-bages {
+    margin-left: 0;
+  }
+  .footer-payment-system-list {
+    margin-right: 1rem;
+  }
+  .footer-payment-system-list-item {
+    margin-left: 0;
   }
 }
 @media (max-width: 780px) {
@@ -1028,6 +1116,63 @@ html {
   .cta-img {
     display: none;
   }
+  .footer-header-content {
+    gap: 1rem;
+  }
+  .footer-basement-bottom {
+    flex-wrap: wrap;
+  }
+  .footer-payment-system-list {
+    justify-content: start;
+    margin: 0.625rem 0;
+  }
+  .online-chat {
+    margin: 0;
+  }
+  .footer-online-chats-list {
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .footer-main-content-wrapper {
+    flex-wrap: wrap;
+  }
+  .contacts-wrapper {
+    flex-basis: 70%;
+  }
+  .contacts-list {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .footer-main-content-wrapper {
+    justify-content: space-between;
+  }
+  .for-buyers-list {
+    columns: 3;
+  }
+  .callback-link-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .footer-policy {
+    flex-basis: 70%;
+  }
+}
+@media (max-width: 650px) {
+  .product-catalog-list {
+    columns: 4;
+  }
+  .footer-logo-link {
+    flex-basis: 30%;
+  }
+  .footer-header-content {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 1rem;
+  }
+  .footer-header-title {
+    max-width: 90%;
+  }
 }
 @media (max-width: 618px) {
   .visit-benefits-list-item {
@@ -1064,6 +1209,14 @@ html {
     transform: none;
     width: 100%;
     margin: auto;
+  }
+}
+@media (max-width: 570px) {
+  .product-catalog-list {
+    columns: 3;
+  }
+  .contacts-wrapper {
+    flex-basis: 100%;
   }
 }
 @media (max-width: 490px) {
@@ -1146,5 +1299,48 @@ html {
   .cta-icon {
     height: 1.25rem;
     width: 1.25rem;
+  }
+  .for-buyers-list {
+    columns: 2;
+  }
+  .contacts-list {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+  }
+  .footer-payment-system-list {
+    flex-basis: 100%;
+  }
+  .footer-header-form {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .footer-input {
+    margin-right: 0;
+  }
+  .footer-form-button {
+    flex-basis: 100%;
+  }
+  .product-catalog-list {
+    columns: 1;
+  }
+  .for-buyers {
+    flex-basis: 100%;
+  }
+  .for-buyers-list {
+    columns: 1;
+  }
+  .market-bages {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-top: 1rem;
+  }
+  .footer-social-list {
+    flex-direction: column;
+  }
+  .footer-header-form .just-validate-error-label {
+    right: 5px;
   }
 }

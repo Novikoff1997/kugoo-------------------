@@ -104,39 +104,69 @@ const sendSuccess = () => {};
 
 /* Валидация */
 
-const forms = document.querySelectorAll("form");
-forms.forEach((form) => {
-  const validation = new JustValidate(form, {
-    errorFieldCssClass: "is-invalid",
-  });
-  validation
-    .addField("[name=userphone]", [
-      {
-        rule: "required",
-        errorMessage: "Укажите телефон",
-      },
-      {
-        rule: "minLength",
-        value: 18,
-        errorMessage: "Номер слишком короткий",
-      },
-    ])
-    .onSuccess((event) => {
-      const thisForm = event.target;
-      const formData = new FormData(thisForm);
-      const ajaxSend = (formData) => {
-        fetch(thisForm.getAttribute("action"), {
-          method: thisForm.getAttribute("method"),
-          body: formData,
-        }).then((responce) => {
-          if (responce.ok) {
-            thisForm.reset();
-            sendSuccess();
-          } else {
-            alert("Ошибка. Текст ошибки:  ".responce.statusText);
-          }
-        });
-      };
-      ajaxSend(formData);
-    });
+const phoneForm = new JustValidate(".phone-form", {
+  errorFieldCssClass: "is-invalid",
 });
+phoneForm
+  .addField("[name=userphone]", [
+    {
+      rule: "required",
+      errorMessage: "Укажите телефон",
+    },
+    {
+      rule: "minLength",
+      value: 18,
+      errorMessage: "Номер слишком короткий",
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target;
+    const formData = new FormData(thisForm);
+    const ajaxSend = (formData) => {
+      fetch(thisForm.getAttribute("action"), {
+        method: thisForm.getAttribute("method"),
+        body: formData,
+      }).then((responce) => {
+        if (responce.ok) {
+          thisForm.reset();
+          sendSuccess();
+        } else {
+          alert("Ошибка. Текст ошибки:  ".responce.statusText);
+        }
+      });
+    };
+    ajaxSend(formData);
+  });
+
+const emailForm = new JustValidate(".email-form", {
+  errorFieldCssClass: "is-invalid",
+});
+emailForm
+  .addField("[name=useremail]", [
+    {
+      rule: "required",
+      errorMessage: "Укажите email",
+    },
+    {
+      rule: "email",
+      errorMessage: "Неверный формат email",
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target;
+    const formData = new FormData(thisForm);
+    const ajaxSend = (formData) => {
+      fetch(thisForm.getAttribute("action"), {
+        method: thisForm.getAttribute("method"),
+        body: formData,
+      }).then((responce) => {
+        if (responce.ok) {
+          thisForm.reset();
+          sendSuccess();
+        } else {
+          alert("Ошибка. Текст ошибки:  ".responce.statusText);
+        }
+      });
+    };
+    ajaxSend(formData);
+  });

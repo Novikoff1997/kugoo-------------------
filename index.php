@@ -607,7 +607,7 @@
             <div class="cta-content">
               <h2 class="section-title cta-title">Нет нужной модели, которую хотите протестировать?</h2>
               <p class="cta-text">Оставьте заявку, и менеджер подберет нужный самокат</p>
-              <form action="./handler.php" method="post" class="cta-form">
+              <form action="./handler.php" method="POST" class="cta-form phone-form">
                 <input
                   name="userphone"
                   class="input input-cta phone-mask"
@@ -650,8 +650,8 @@
             <h2 class="footer-header-title">
               Оставьте свою почту и станьте первым, кто получит скидку на новые самокаты
             </h2>
-            <form action="#" class="foote-header-form">
-              <input type="email" class="input footer-input" placeholder="Введите Ваш email" />
+            <form action="handler.php" method="POST" class="footer-header-form email-form">
+              <input name="useremail" type="email" class="input footer-input" placeholder="Введите Ваш email" />
               <button class="button-white footer-form-button">Подписаться</button>
             </form>
           </div>
@@ -736,7 +736,7 @@
       <div class="footer-basement">
         <div class="container">
           <div class="footer-basement-top">
-            <a href="/" class="logo-link"><div class="logo footer-logo">Kugoo</div></a>
+            <a href="/" class="logo-link footer-logo-link"><div class="logo footer-logo">Kugoo</div></a>
             <div class="market-bages">
               <a href="#" class="get-on-google-play badge-link">
                 <?php require_once('./img/google-play-badge.svg') ?>
@@ -858,6 +858,9 @@
         </div>
       </div>
     </footer>
+    <div class="modal-window">
+      
+    </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/just-validate.production.min.js"></script>
     <script src="js/main.js"></script>
