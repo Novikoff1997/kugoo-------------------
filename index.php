@@ -717,13 +717,15 @@
                   <div class="contacts-call-center-timemode">Пн-Вс 10:00 - 20:00</div>
                 </li>
                 <li class="contacts-list-item">
-                  <p class="contacts-service-center-text">Call-центр</p>
-                  <a href="tel:+78005055461" class="contacts-service-center-phone">+7 (800) 505-54-61</a>
+                  <p class="contacts-service-center-text">Сервисный центр</p>
+                  <a href="tel:+74993507692" class="contacts-service-center-phone">+7 (499) 350-76-92</a>
                   <div class="contacts-service-center-timemode">Пн-Вс 10:00 - 20:00</div>
                 </li>
               </ul>
             </div>
-            <a href="#" class="callback-link">Заказать звонок</a>
+            <div class="callback-link-wrapper">
+              <a href="#" class="callback-link">Заказать звонок</a>
+            </div>
           </div>
           <!-- /.footer-main-content-wrapper -->
         </div>
@@ -737,9 +739,11 @@
             <a href="/" class="logo-link"><div class="logo footer-logo">Kugoo</div></a>
             <div class="market-bages">
               <a href="#" class="get-on-google-play badge-link">
-                <svg class="icon google-play-icon" width="151" height="45">
+                <?php require_once('./img/google-play-badge.svg') ?>
+                <!-- Элемент некорректро отображается через svg use раскомментировать когда найдется решение -->
+                <!-- <svg class="icon google-play-icon" width="152" height="45">
                   <use href="./img/sprites.svg#google-play-badge"></use>
-                </svg>
+                </svg> -->
               </a>
               <a href="#" class="get-on-appstore badge-link">
                 <svg class="icon attstore-icon" width="134" height="45">

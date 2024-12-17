@@ -122,6 +122,9 @@ html {
   line-height: 2.6875rem;
   text-transform: uppercase;
 }
+.header-nav-logo {
+  margin-right: 2.2125rem;
+}
 .header-nav-catalog-button {
   display: flex;
   align-items: center;
@@ -611,12 +614,12 @@ html {
 /* -------------------------- FOOTER -------------------------- */
 /* footer-header */
 .footer {
-  max-width: 86.25rem;
+  max-width: 90rem;
   margin: auto;
 }
 .footer-header {
   background-color: #6f73ee;
-  margin-bottom: 2.875rem;
+  margin-bottom: 3.175rem;
 }
 .footer-header-content {
   display: flex;
@@ -669,11 +672,14 @@ html {
 
 /* footer-main */
 .footer-main {
-  margin-bottom: 4.6875rem;
+  margin-bottom: 3.8875rem;
 }
 .footer-main-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+.product-catalog {
+  margin-right: 7.8125rem;
 }
 .product-catalog-list,
 .for-buyers-list {
@@ -685,7 +691,7 @@ html {
   margin-bottom: 0.625rem;
 }
 .for-buyers-list-item {
-  margin-right: 2.875rem;
+  margin-right: 1.775rem;
 }
 .footer-list-title {
   color: #282739;
@@ -703,8 +709,14 @@ html {
   line-height: 1.25rem;
   text-decoration: none;
 }
+.for-buyers {
+  margin-right: 4.275rem;
+}
 .for-buyers-list {
   columns: 2;
+}
+.contacts-wrapper {
+  margin-right: 4.7875rem;
 }
 .contacts-list {
   list-style: none;
@@ -742,32 +754,40 @@ html {
 .callback-link {
   text-decoration: none;
   color: #6f73ee;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.0625rem;
+}
+.callback-link-wrapper {
+  padding-top: 0.425rem;
 }
 .footer-separator {
   border: 1px solid rgb(93, 108, 123);
   opacity: 0.15;
+  margin: 0;
 }
 /* footer-basement */
 .footer-basement-top {
   display: flex;
   align-items: center;
+  padding-top: 0.5rem;
 }
 .market-bages {
-  flex-grow: 1;
-  margin-left: 4.375rem;
+  margin-right: 15.8rem;
+  margin-left: 3.675rem;
 }
 .badge-link {
   text-decoration: none;
+}
+.get-on-google-play {
+  margin-right: 0.3rem;
 }
 .footer-social-list {
   display: flex;
   align-items: center;
   padding: 0;
   list-style: none;
-  gap: 0.625rem;
+  gap: 1.225rem;
 }
 .footer-social-link {
   display: flex;
@@ -794,12 +814,12 @@ html {
 .footer-basement-bottom {
   display: flex;
   align-items: center;
+  padding-top: 0.5rem;
 }
 .footer-payment-details {
   margin-right: 2.75rem;
 }
 .footer-policy {
-  flex-grow: 1;
 }
 .footer-payment-details,
 .footer-policy {
@@ -810,16 +830,19 @@ html {
 }
 .footer-payment-system-list {
   display: flex;
+  justify-content: flex-end;
   list-style: none;
   padding: 0;
-  gap: 0.3125rem;
   margin-right: 2.3125rem;
+  flex-grow: 1;
 }
 .footer-payment-system-list-item {
   padding: 0.4375rem 0.3125rem;
+  margin-left: 0.4rem;
 }
 .footer-online-chats-list {
   margin-left: 0.9375rem;
+  gap: 1.2625rem;
 }
 /* -------------------------- MEDIA -------------------------- */
 @media (max-width: 1276px) {
