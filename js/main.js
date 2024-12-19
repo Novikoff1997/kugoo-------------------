@@ -99,10 +99,12 @@ document.addEventListener("input", (e) => {
     input.value = result;
   }
 });
+/* получаем диалоговое модальное окно */
 const modalWindow = document.querySelector("#modal-feedback");
+/* получаем кнопки отвеечающие за открытие модального окна */
 const modalButtons = document.querySelectorAll("[data-toggle=modal]");
+/* Получаем само модальное окно */
 const modalDialog = document.querySelector(".modal-dialog");
-console.log(modalDialog);
 modalButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
@@ -110,12 +112,14 @@ modalButtons.forEach((button) => {
   });
 });
 
+/* Если жмем Esc модальное окно закрывается */
 document.addEventListener("keyup", (event) => {
   if (event.key == "Escape" && modalWindow.classList.contains("is-open")) {
     modalWindow.classList.toggle("is-open");
   }
 });
 
+/* Уведомление об успешной отправке формы */
 const sendSuccess = (event) => {
   const alertBox = document.querySelector(".success-alert");
   alertBox.classList.remove("unsuccess");
@@ -168,12 +172,16 @@ phoneForms.forEach((form) => {
       ajaxSend(formData);
     });
 });
+
+/* закрытие модального окна при клике вне модального окна */
 modalWindow.addEventListener("click", (event) => {
-  console.log(event.composedPath());
+  /* Условие проверяем что в пути до элемента по которому произошел клик не присутствует указанный элемент */
   if (!event.composedPath().includes(modalDialog)) {
     modalWindow.classList.remove("is-open");
   }
 });
+
+/* закрытие модального окна по кнопке закрытия */
 const modalClose = document.querySelector(".close-icon");
 modalClose.addEventListener("click", (event) => {
   modalWindow.classList.remove("is-open");
