@@ -99,44 +99,85 @@ document.addEventListener("input", (e) => {
     input.value = result;
   }
 });
-
-const sendSuccess = () => {};
-
-/* Валидация */
-
-const phoneForm = new JustValidate(".phone-form", {
-  errorFieldCssClass: "is-invalid",
-});
-phoneForm
-  .addField("[name=userphone]", [
-    {
-      rule: "required",
-      errorMessage: "Укажите телефон",
-    },
-    {
-      rule: "minLength",
-      value: 18,
-      errorMessage: "Номер слишком короткий",
-    },
-  ])
-  .onSuccess((event) => {
-    const thisForm = event.target;
-    const formData = new FormData(thisForm);
-    const ajaxSend = (formData) => {
-      fetch(thisForm.getAttribute("action"), {
-        method: thisForm.getAttribute("method"),
-        body: formData,
-      }).then((responce) => {
-        if (responce.ok) {
-          thisForm.reset();
-          sendSuccess();
-        } else {
-          alert("Ошибка. Текст ошибки:  ".responce.statusText);
-        }
-      });
-    };
-    ajaxSend(formData);
+const modalWindow = document.querySelector("#modal-feedback");
+const modalButtons = document.querySelectorAll("[data-toggle=modal]");
+const modalDialog = document.querySelector(".modal-dialog");
+console.log(modalDialog);
+modalButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    modalWindow.classList.add("is-open");
   });
+});
+
+document.addEventListener("keyup", (event) => {
+  if (event.key == "Escape" && modalWindow.classList.contains("is-open")) {
+    modalWindow.classList.toggle("is-open");
+  }
+});
+
+const sendSuccess = (event) => {
+  const alertBox = document.querySelector(".success-alert");
+  alertBox.classList.remove("unsuccess");
+  alertBox.classList.add("success");
+  setTimeout(() => {
+    alertBox.classList.remove("success");
+    alertBox.classList.add("unsuccess");
+  }, 2500);
+};
+/* Валидация */
+const phoneForms = document.querySelectorAll(".phone-form");
+phoneForms.forEach((form) => {
+  const validation = new JustValidate(form, {
+    errorFieldCssClass: "is-invalid",
+  });
+  validation
+    .addField("[name=userphone]", [
+      {
+        rule: "required",
+        errorMessage: "Укажите телефон.",
+      },
+      {
+        rule: "minLength",
+        value: 18,
+        errorMessage: "Номер слишком короткий.",
+      },
+    ])
+    .addField("[name=form_check]", [
+      {
+        rule: "required",
+        errorMessage: "Нужно согласие на обработку данных.",
+      },
+    ])
+    .onSuccess((event) => {
+      const thisForm = event.target;
+      const formData = new FormData(thisForm);
+      const ajaxSend = (formData) => {
+        fetch(thisForm.getAttribute("action"), {
+          method: thisForm.getAttribute("method"),
+          body: formData,
+        }).then((responce) => {
+          if (responce.ok) {
+            thisForm.reset();
+            sendSuccess();
+          } else {
+            alert("Ошибка. Текст ошибки:  ".responce.statusText);
+          }
+        });
+      };
+      ajaxSend(formData);
+    });
+});
+modalWindow.addEventListener("click", (event) => {
+  console.log(event.composedPath());
+  if (!event.composedPath().includes(modalDialog)) {
+    modalWindow.classList.remove("is-open");
+  }
+});
+const modalClose = document.querySelector(".close-icon");
+modalClose.addEventListener("click", (event) => {
+  modalWindow.classList.remove("is-open");
+});
 
 const emailForm = new JustValidate(".email-form", {
   errorFieldCssClass: "is-invalid",

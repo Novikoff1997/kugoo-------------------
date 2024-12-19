@@ -1,0 +1,25 @@
+.button-purple:hover {
+  background-color: #6f73ee;
+}
+.button-white:hover {
+  box-shadow: none;
+}
+.header-nav-top-link:hover {
+  color: #5d6c7b;
+}
+.online-chats-link:hover .online-chat-icon {
+  transform: none;
+}
+.header-nav-top-phone:hover {
+  text-decoration: none;
+}
+.product-catalog-link:hover,
+.for-buyer-link:hover {
+  text-decoration: none;
+}
+.callback-link:hover {
+  transform: none;
+}
+.footer-social-link:hover .attstore-icon {
+  transform: none;
+}

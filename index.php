@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="favicon" rel="icon" href="./img/favicon.ico" type="image/ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +17,13 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/hover-disable.css" media="(max-width: 992px)">
+    <script>
+            /*! modernizr 3.6.0 (Custom Build) | MIT *
+      * https://modernizr.com/download/?-webp-setclasses !*/
+      !function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);
+    </script>
+    <title>Электросамокаты - KUGOO</title>
   </head>
   <body>
     <nav class="header-nav">
@@ -30,7 +37,7 @@
               <a href="#" class="header-nav-top-link">Сотрудничество</a>
             </li>
             <li class="header-nav-top-list-item">
-              <a href="#" class="header-nav-top-link">Заказать звонок</a>
+              <a href="#" class="header-nav-top-link" data-toggle="modal">Заказать звонок</a>
             </li>
           </ul>
           <!-- /.header-nav-top-list -->
@@ -64,17 +71,17 @@
         <div class="header-nav-bottom">
           <a href="/" class="logo-link"><div class="logo header-nav-logo">Kugoo</div></a>
           <button class="button-purple header-nav-catalog-button">
-            <div class="catalog-button-lines">
+            <span class="catalog-button-lines">
               <span class="catalog-button-line"></span>
               <span class="catalog-button-line"></span>
               <span class="catalog-button-line"></span>
-            </div>
+            </span>
             Каталог
           </button>
           <div class="header-search-form">
             <input name="search" type="text" class="header-search-input" placeholder="Искать самокат KUGO" />
             <button class="button-purple header-search-button">
-              <svg class="icon online-chat-icon" width="16px" height="16px">
+              <svg class="icon" width="16px" height="16px">
                 <use href="./img/sprites.svg#magnifier"></use>
               </svg>
             </button>
@@ -82,14 +89,14 @@
           <ul class="header-nav-bottom-shopping-tools">
             <li class="header-nav-bottom-shopping-tools-item">
               <a href="#" class="header-nav-phopping-tools-link">
-                <svg class="icon online-chat-icon" width="20px" height="12px">
+                <svg class="icon" width="20px" height="12px">
                   <use href="./img/sprites.svg#balance"></use>
                 </svg>
               </a>
             </li>
             <li class="header-nav-bottom-shopping-tools-item">
               <a href="#" class="header-nav-phopping-tools-link">
-                <svg class="icon online-chat-icon" width="18px" height="16px" fill="#282739">
+                <svg class="icon" width="18px" height="16px" fill="#282739">
                   <use href="./img/sprites.svg#favorites"></use>
                 </svg>
               </a>
@@ -138,7 +145,7 @@
               <p class="vitis-benefits-text">Проверите лучшие самокаты в деле</p>
             </li>
           </ul>
-          <button class="button-white header-button">Записаться</button>
+          <button class="button-white header-button" data-toggle="modal">Записаться</button>
         </div>
         <!-- /.header-content -->
       </div>
@@ -366,7 +373,7 @@
                   </div>
                 </div>
                 <!-- /.price-and-tools -->
-                <button class="button-purple test-drive-card-button">Записаться на тест-драйв</button>
+                <button class="button-purple test-drive-card-button" data-toggle="modal">Записаться на тест-драйв</button>
               </div>
               <div class="swiper-slide test-drive-card">
                 <div class="test-drive-card-tools">
@@ -437,7 +444,7 @@
                   <!-- /.price-and-tools -->
                 </div>
                 <!-- /.test-drive-card-content-wrapper -->
-                <button class="button-purple test-drive-card-button">Записаться на тест-драйв</button>
+                <button class="button-purple test-drive-card-button" data-toggle="modal">Записаться на тест-драйв</button>
               </div>
               <div class="swiper-slide test-drive-card">
                 <div class="test-drive-card-tools">
@@ -507,7 +514,7 @@
                   </div>
                   <!-- /.price-and-tools -->
                 </div>
-                <button class="button-purple test-drive-card-button">Записаться на тест-драйв</button>
+                <button class="button-purple test-drive-card-button" data-toggle="modal">Записаться на тест-драйв</button>
               </div>
               <div class="swiper-slide test-drive-card">
                 <div class="test-drive-card-tools">
@@ -578,7 +585,7 @@
                   <!-- /.price-and-tools -->
                 </div>
                 <!-- /.test-drive-card-content-wrapper -->
-                <button class="button-purple test-drive-card-button">Записаться на тест-драйв</button>
+                <button class="button-purple test-drive-card-button" data-toggle="modal">Записаться на тест-драйв</button>
               </div>
               <!-- /.test-drive-card -->
             </div>
@@ -608,25 +615,25 @@
               <h2 class="section-title cta-title">Нет нужной модели, которую хотите протестировать?</h2>
               <p class="cta-text">Оставьте заявку, и менеджер подберет нужный самокат</p>
               <form action="./handler.php" method="POST" class="cta-form phone-form">
+                <div class="input-wrapper-cta">
                 <input
                   name="userphone"
                   class="input input-cta phone-mask"
                   type="tel"
                   placeholder="+7 (___) __ - __ - __"
                 />
+                </div>
                 <button type="submit" class="button-purple cta-form-button">
                   Оставить заявку на тест-драйв
                 </button>
+                <div class="form-checkbox-wrapper form-checkbox-wrapper-cta">
+                  <input name="form_check" id="form-checkbox-cta" type="checkbox" class="form-checkbox">
+                  <label for="form-checkbox-cta">
+                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и
+                    <a href="#" class="pilicy-link-cta">политикой конфиденциальности</a>
+                  </label>
+                </div>
               </form>
-              <div class="cta-agreement">
-                <svg class="icon cta-icon" width="16" height="16">
-                  <use href="./img/sprites.svg#check"></use>
-                </svg>
-                <p class="cta-agreement-text">
-                  Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и
-                  <a href="#" class="pilicy-link">политикой конфиденциальности</a>
-                </p>
-              </div>
             </div>
             <picture>
               <source type="image/webp" srcset="./img/cta-img.webp" />
@@ -640,9 +647,6 @@
       <!-- /.section cta -->
     </main>
 
-    <div class="modal-success">
-      <p class="modal-success-text">Заявка успешно отправлена!</p>
-    </div>
     <footer class="footer">
       <div class="footer-header">
         <div class="container">
@@ -724,7 +728,7 @@
               </ul>
             </div>
             <div class="callback-link-wrapper">
-              <a href="#" class="callback-link">Заказать звонок</a>
+              <a href="#" class="callback-link" data-toggle="modal">Заказать звонок</a>
             </div>
           </div>
           <!-- /.footer-main-content-wrapper -->
@@ -858,9 +862,62 @@
         </div>
       </div>
     </footer>
-    <div class="modal-window">
-      
+    <div class="modal-window" id="modal-feedback">
+      <div class="modal-dialog">
+        <svg class="icon close-icon" width="20" height="20">
+          <use href="./img/sprites.svg#close"></use>
+        </svg>
+        <div class="modal-dialog-content">
+          <h2 class="modal-window-title">
+            Запишитесь на тест-драйв электросамоката
+          </h2>
+          <p class="modal-window-undertitle-text">и подберите модель для себя</p>
+          <p class="modal-window-text">
+            Менеджер свяжется с вами в течение 5 минут, чтобы согласовать время
+          </p>
+          <form action="./handler.php" method="post" class="phone-form modal-window-form">
+            <h5 class="form-title">Как с вами удобнее связаться?</h5>
+            <div class="input-wrapper-modal">
+            <input
+                  name="userphone"
+                  class="input input-modal-window phone-mask"
+                  type="tel"
+                  placeholder="+7 (___) __ - __ - __"
+                />
+            </div>
+            <button type="submit" class="button-purple modal-form-button">
+              Оставить заявку на тест-драйв
+            </button>
+            <div class="form-checkbox-wrapper form-checkbox-wrapper-modal">
+              <input name="form_check" id="form-checkbox-modal" type="checkbox" class="form-checkbox">
+              <label for="form-checkbox-modal">
+                Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и
+                <a href="#" class="pilicy-link-modal">политикой конфиденциальности</a>
+              </label>
+            </div>
+          </form>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="./img/modal-window-image.webp" />
+          <source type="image/jpeg" srcset="./img/modal-window-image.jpg" />
+          <img
+            src="./img/modal-window-image.jpg"
+            class="modal-window-img"
+            alt="modal-window-image"
+            width="337"
+            height="497"
+          />
+        </picture>
+      </div>
     </div>
+    <!-- /.modal-window -->
+     <div class="success-alert unsuccess">
+      <svg class="icon success-icon" width="35" height="35">
+          <use href="./img/sprites.svg#success"></use>
+        </svg>
+        <p class="success-text">Ваша заявку успешно отправлена!</p>
+     </div>
+     <!-- /.success-alert -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/just-validate.production.min.js"></script>
     <script src="js/main.js"></script>
